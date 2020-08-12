@@ -5,8 +5,8 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
+//import IconButton from '@material-ui/core/IconButton';
+//import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import InputBase from '@material-ui/core/InputBase';
 import { createMuiTheme } from '@material-ui/core/styles';
@@ -17,6 +17,7 @@ import {BrowserRouter as Router, Link} from 'react-router-dom';
 //import Masuk from '../Tampilan/LoginUser';
 import { withRouter } from 'react-router-dom';
 import history from '../history';
+//import Navbar from 'react-bootstrap';
 
 
 
@@ -32,6 +33,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'none',
     [theme.breakpoints.up('sm')]: {
       display: 'block',
+      pointerEvents:'auto',
       
   },
 },
@@ -48,7 +50,7 @@ inputRoot: {
   color: 'inherit',
 },
 inputInput: {
-  padding: theme.spacing(1, 1, 0, 0),
+  padding: theme.spacing(1, 1, 0 , 0),
   // vertical padding + font size from searchIcon
   paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
   transition: theme.transitions.create('width'),
@@ -87,14 +89,14 @@ const NavbarAwal = (props)=> {
       id="app_bar"
       >
         <Toolbar>
-          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+          {/* <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
             <MenuIcon />
           </IconButton>
-          <Link>
-          <Typography variant="h4" className={classes.judul} id= "judul" align = "left">
+          */}
+          <Typography variant="h4" className={classes.judul} id= "judul" align = "left"
+          onClick={()=> history.push('/home')}>
            Sembako Go!
           </Typography>
-          </Link>
           <div className={classes.search}>
             <div className={classes.searchIcon}>
               <SearchIcon alignItems="center"></SearchIcon>
@@ -109,7 +111,7 @@ const NavbarAwal = (props)=> {
               alignItems="center"
             />
           </div>
-          <Button color="inherit" ><Link> Masuk Sebagai Pedagang</Link></Button>
+          <Button color="inherit" onClick={() => history.push('/Login')}>Masuk Sebagai Pedagang</Button>
         </Toolbar>
       </AppBar>
     </div>

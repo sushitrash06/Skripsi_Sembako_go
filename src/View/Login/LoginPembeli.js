@@ -12,7 +12,7 @@ import Grid from '@material-ui/core/Grid';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
-//import gambar1 from './gambar.jpg';
+import gambar5 from './gambar5.jpg';
 
 
 const useStyle = makeStyles((theme)=>({
@@ -20,7 +20,7 @@ const useStyle = makeStyles((theme)=>({
         height: '100vh',
     },
     image:{
-        backgroundImage:'./gambar5.jpg',
+        backgroundImage:{gambar5},
         backgroundColor:
             theme.palette.type === 'light' ? theme.palette.grey[50]: theme.palette.grey[900],
             backgroundSize: 'cover',

@@ -16,6 +16,7 @@
   text-align: center;
   margin-top: 50px;
   margin-bottom: 50px;
+  font-family: 'Pacifico', cursive;
 }
 #judul{
   font-family: 'Pacifico', cursive;
@@ -35,4 +36,12 @@
 }
 .linknya{
   text-align: center;
+}
+.paper{
+  background-color: aquamarine;
+}
+@media only screen and (max-width:600px){
+  #grid2{
+    direction: column;
+  }
 }
